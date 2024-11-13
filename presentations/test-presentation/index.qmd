@@ -3,7 +3,7 @@ title: "TSO Analysis Framework"
 subtitle: "Governance & Political Dimensions"
 format:
     revealjs:
-        theme: [default, custom.scss]
+        theme: default
         slide-number: true
         show-slide-number: all
         width: 1600
@@ -13,25 +13,26 @@ format:
         background-transition: fade
         highlight-style: github
         css: |
-          .reveal .slide-number { 
-            font-size: 24px;
-          }
-          .reveal h2 {
-            color: #2a76dd;
-            border-bottom: 2px solid #2a76dd;
-            padding-bottom: 10px;
-          }
-          .reveal ul {
-            font-size: 36px;
-          }
-          .reveal ul ul {
-            font-size: 32px;
-          }
+            .reveal h2 {
+                color: #2a76dd;
+                border-bottom: 2px solid #2a76dd;
+                padding-bottom: 10px;
+            }
+            .reveal ul {
+                font-size: 36px;
+            }
+            .reveal ul ul {
+                font-size: 32px;
+            }
+            .highlight-blue {
+                color: #2a76dd;
+                font-weight: bold;
+            }
 execute:
     echo: false
 ---
 
-## Governance {.center background-color="#f8f9fa"}
+## Governance {.center}
 
 ::: {.incremental}
 - **Ownership Structure**
@@ -45,14 +46,7 @@ execute:
     - TSO Climate Mandate
 :::
 
-::: {.notes}
-Framework for comparing:
-- Ownership patterns across TSOs
-- Market structure variations
-- Policy alignment and implementation
-:::
-
-## Politics {.center background-color="#f8f9fa"}
+## Politics {.center}
 
 ::: {.incremental}
 - **Policy Alignment**
@@ -65,25 +59,3 @@ Framework for comparing:
     - ENTSO-E Leadership
     - ENTSO-E Committee Influence
 :::
-
-::: {.notes}
-Framework for analyzing:
-- Policy commitment levels
-- Market approach differences
-- International cooperation patterns
-:::
-
----
-
-/* custom.scss */
-.highlight-blue {
-    color: #2a76dd;
-    font-weight: bold;
-}
-
-.center {
-    text-align: left !important;
-    h2 {
-        text-align: center !important;
-    }
-}
