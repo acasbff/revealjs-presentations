@@ -1,61 +1,27 @@
 ---
 title: "TSO Analysis Framework"
-subtitle: "Governance & Political Dimensions"
 format:
     revealjs:
         theme: default
-        slide-number: true
+        navigation-mode: linear
+        controls: true
+        controls-layout: bottom-right
+        controls-tutorial: true
         show-slide-number: all
         width: 1600
         height: 900
-        footer: "TSO Analysis 2024"
-        transition: slide
-        background-transition: fade
-        highlight-style: github
-        css: |
-            .reveal h2 {
-                color: #2a76dd;
-                border-bottom: 2px solid #2a76dd;
-                padding-bottom: 10px;
-            }
-            .reveal ul {
-                font-size: 36px;
-            }
-            .reveal ul ul {
-                font-size: 32px;
-            }
-            .highlight-blue {
-                color: #2a76dd;
-                font-weight: bold;
-            }
-execute:
-    echo: false
 ---
 
-## Governance {.center}
+## TSO Analysis Framework
 
-::: {.incremental}
-- **Ownership Structure**
-    - Public Share Analysis
-    - Detailed Ownership Patterns
-- **Market Structure**
-    - Unbundling Model Implementation
-- **Policy Framework**
-    - Government Climate Mandate
-    - Regulator Climate Mandate
-    - TSO Climate Mandate
-:::
+- Governance
+  - Ownership (public share)
+  - Ownership (detailed)
+  - Unbundling model
+  - Legislative mandate
 
-## Politics {.center}
-
-::: {.incremental}
-- **Policy Alignment**
-    - [2035]{.highlight-blue} Benchmark Positioning
-    - Renewable Integration Progress (2022 Ember)
-- **Market Position**
-    - Stance on Capacity Remuneration Markets
-- **International Engagement**
-    - Global Progressive TSO Coalition
-    - ENTSO-E Leadership
-    - ENTSO-E Committee Influence
-:::
+- Politics
+  - Government aligned with 2035 benchmark
+  - Current share of renewables (%) 2022 Ember
+  - Position on Capacity Remuneration Markets
+  - Global progressive TSO coalition member
