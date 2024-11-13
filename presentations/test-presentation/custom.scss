@@ -1,0 +1,101 @@
+/*
+ * Custom SCSS for RevealJS presentation
+ */
+
+// Variables
+$primary-color: #2a76dd;
+$background-light: #f8f9fa;
+$text-dark: #333333;
+$border-light: #e9ecef;
+
+// General presentation styles
+.reveal {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    
+    // Headers
+    h2 {
+        color: $primary-color;
+        border-bottom: 2px solid $primary-color;
+        padding-bottom: 10px;
+        margin-bottom: 1em;
+    }
+
+    // Lists
+    ul {
+        font-size: 36px;
+        margin-top: 0.5em;
+        
+        ul {
+            font-size: 32px;
+            margin-top: 0.2em;
+        }
+
+        li {
+            margin: 0.5em 0;
+            line-height: 1.4;
+        }
+    }
+}
+
+// Utility classes
+.highlight-blue {
+    color: $primary-color;
+    font-weight: bold;
+}
+
+.center {
+    text-align: left !important;
+    
+    h2 {
+        text-align: center !important;
+    }
+}
+
+// Slide customization
+.slide-background {
+    &.center {
+        background-color: $background-light;
+    }
+}
+
+// Custom elements
+.notes {
+    display: none;
+}
+
+// Enhanced visibility for slide numbers
+.reveal .slide-number {
+    font-size: 24px;
+    background-color: transparent;
+    color: $text-dark;
+}
+
+// Emphasis styles
+strong {
+    color: $primary-color;
+}
+
+// List item spacing and style
+.reveal ul {
+    li {
+        margin-bottom: 0.5em;
+        
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+// Special formatting for hierarchical items
+.reveal ul ul {
+    li {
+        color: lighten($text-dark, 10%);
+    }
+}
+
+// Incremental reveal animation
+.incremental {
+    > * {
+        transition: opacity 0.2s ease-in-out;
+    }
+}
