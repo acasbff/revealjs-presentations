@@ -4,11 +4,19 @@ on:
   push:
     branches: [ main ]
 
+# Add these permissions
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
     
     - name: Set up Quarto
       uses: quarto-dev/quarto-actions/setup@v2
@@ -23,3 +31,4 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./presentations
+        force_orphan: true
