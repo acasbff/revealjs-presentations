@@ -4,49 +4,24 @@ on:
   push:
     branches: [ main ]
 
-# Sets permissions of the GITHUB_TOKEN
-permissions:
-  contents: write
-  pages: write
-  id-token: write
-
-# Allow only one concurrent deployment
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      
-      - name: Set up Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
-      
-      - name: Configure Pages
-        uses: actions/configure-pages@v3
-        
-      - name: Render Quarto Project
-        run: |
-          cd presentations/test-presentation
-          quarto render index.qmd -t revealjs
-          
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
-        with:
-          path: ./presentations
-
   deploy:
-    needs: build
     runs-on: ubuntu-latest
-    
-    # Deploy to the github-pages environment
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-      
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+    - uses: actions/checkout@v3
+    
+    - name: Set up Quarto
+      uses: quarto-dev/quarto-actions/setup@v2
+    
+    - name: Render Quarto Project
+      run: |
+        cd presentations/test-presentation
+        quarto render index.qmd -t revealjs
+    
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./presentations
+        force_orphan: true
+        publish_branch: gh-pages  # Explicitly specify the branch
