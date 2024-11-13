@@ -1,5 +1,10 @@
 ---
 title: "TSO Analysis Framework"
+# Remember to update GitHub after changes:
+# git add index.qmd
+# git commit -m "Update presentation content"
+# git push origin main
+# view at https://acasbff.github.io/revealjs-presentations/test-presentation/
 format:
     revealjs:
         theme: default
@@ -12,16 +17,21 @@ format:
         height: 900
 ---
 
-## TSO Analysis Framework
+## Governance
 
-- Governance
-  - Ownership (public share)
-  - Ownership (detailed)
-  - Unbundling model
-  - Legislative mandate
+- Ownership (public share)
+- Ownership (detailed)
+- Unbundling model
+- Legislative mandate:
+    - Government Climate Mandate
+    - Regulator Climate Mandate
+    - TSO Climate Mandate
 
-- Politics
-  - Government aligned with 2035 benchmark
-  - Current share of renewables (%) 2022 Ember
-  - Position on Capacity Remuneration Markets
-  - Global progressive TSO coalition member
+## Politics
+
+- Government aligned with 2035 benchmark
+- Current share of renewables (%) 2022 Ember
+- Position on Capacity Remuneration Markets
+- Global progressive TSO coalition member
+- ENTSO-E board member or head of Assembly
+- ENTSO-E committee chair
