@@ -1,4 +1,21 @@
+# macOS system files
+.DS_Store
+*/.DS_Store
+
+# Quarto temporary files
+/.quarto/
 _site/
 .quarto/
-/.quarto/
+
+# Output files
 *.html
+/_site/
+/_freeze/
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
