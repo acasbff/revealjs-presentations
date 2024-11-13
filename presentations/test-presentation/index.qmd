@@ -1,0 +1,46 @@
+# 1. First, create your Quarto presentation (presentation.qmd)
+---
+title: "My Presentation"
+format: revealjs
+---
+
+# Your content here
+## Slide 1
+Content for slide 1
+
+## Slide 2
+Content for slide 2
+
+# 2. Render the presentation
+# In terminal:
+quarto render presentation.qmd
+
+# 3. After rendering, you'll have an HTML file. There are several ways to embed it:
+
+# Option 1: Using an iframe (in your website's HTML)
+<iframe
+  src="path/to/your/presentation.html"
+  width="100%"
+  height="600px"
+  style="border: 1px solid #ddd;"
+  allowfullscreen
+></iframe>
+
+# Option 2: If using a static site generator like Hugo, in your markdown:
+{{< iframe src="/presentations/your-presentation.html" width="100%" height="600px" >}}
+
+# Option 3: Embedding directly in your page (copy the rendered HTML)
+# Add this to your webpage's <head>:
+<link rel="stylesheet" href="https://unpkg.com/reveal.js@4.3.1/dist/reveal.css">
+<link rel="stylesheet" href="https://unpkg.com/reveal.js@4.3.1/dist/theme/white.css">
+<script src="https://unpkg.com/reveal.js@4.3.1/dist/reveal.js"></script>
+
+# Then include your presentation content and initialize RevealJS:
+<div class="reveal">
+  <div class="slides">
+    <!-- Your slides content here -->
+  </div>
+</div>
+<script>
+  Reveal.initialize({});
+</script>
