@@ -1,46 +1,89 @@
-# 1. First, create your Quarto presentation (presentation.qmd)
 ---
-title: "My Presentation"
-format: revealjs
+title: "TSO Analysis Framework"
+subtitle: "Governance & Political Dimensions"
+format:
+    revealjs:
+        theme: [default, custom.scss]
+        slide-number: true
+        show-slide-number: all
+        width: 1600
+        height: 900
+        footer: "TSO Analysis 2024"
+        transition: slide
+        background-transition: fade
+        highlight-style: github
+        css: |
+          .reveal .slide-number { 
+            font-size: 24px;
+          }
+          .reveal h2 {
+            color: #2a76dd;
+            border-bottom: 2px solid #2a76dd;
+            padding-bottom: 10px;
+          }
+          .reveal ul {
+            font-size: 36px;
+          }
+          .reveal ul ul {
+            font-size: 32px;
+          }
+execute:
+    echo: false
 ---
 
-# Your content here
-## Slide 1
-Content for slide 1
+## Governance {.center background-color="#f8f9fa"}
 
-## Slide 2
-Content for slide 2
+::: {.incremental}
+- **Ownership Structure**
+    - Public Share Analysis
+    - Detailed Ownership Patterns
+- **Market Structure**
+    - Unbundling Model Implementation
+- **Policy Framework**
+    - Government Climate Mandate
+    - Regulator Climate Mandate
+    - TSO Climate Mandate
+:::
 
-# 2. Render the presentation
-# In terminal:
-quarto render presentation.qmd
+::: {.notes}
+Framework for comparing:
+- Ownership patterns across TSOs
+- Market structure variations
+- Policy alignment and implementation
+:::
 
-# 3. After rendering, you'll have an HTML file. There are several ways to embed it:
+## Politics {.center background-color="#f8f9fa"}
 
-# Option 1: Using an iframe (in your website's HTML)
-<iframe
-  src="path/to/your/presentation.html"
-  width="100%"
-  height="600px"
-  style="border: 1px solid #ddd;"
-  allowfullscreen
-></iframe>
+::: {.incremental}
+- **Policy Alignment**
+    - [2035]{.highlight-blue} Benchmark Positioning
+    - Renewable Integration Progress (2022 Ember)
+- **Market Position**
+    - Stance on Capacity Remuneration Markets
+- **International Engagement**
+    - Global Progressive TSO Coalition
+    - ENTSO-E Leadership
+    - ENTSO-E Committee Influence
+:::
 
-# Option 2: If using a static site generator like Hugo, in your markdown:
-{{< iframe src="/presentations/your-presentation.html" width="100%" height="600px" >}}
+::: {.notes}
+Framework for analyzing:
+- Policy commitment levels
+- Market approach differences
+- International cooperation patterns
+:::
 
-# Option 3: Embedding directly in your page (copy the rendered HTML)
-# Add this to your webpage's <head>:
-<link rel="stylesheet" href="https://unpkg.com/reveal.js@4.3.1/dist/reveal.css">
-<link rel="stylesheet" href="https://unpkg.com/reveal.js@4.3.1/dist/theme/white.css">
-<script src="https://unpkg.com/reveal.js@4.3.1/dist/reveal.js"></script>
+---
 
-# Then include your presentation content and initialize RevealJS:
-<div class="reveal">
-  <div class="slides">
-    <!-- Your slides content here -->
-  </div>
-</div>
-<script>
-  Reveal.initialize({});
-</script>
+/* custom.scss */
+.highlight-blue {
+    color: #2a76dd;
+    font-weight: bold;
+}
+
+.center {
+    text-align: left !important;
+    h2 {
+        text-align: center !important;
+    }
+}
